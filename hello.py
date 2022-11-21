@@ -1,20 +1,18 @@
-# 튜플
-a = [1,2,3,4,5] # 리스트 양식
-b = (1,2,3,4,5) # 튜플 양식
+# f-string
 
-# a[1] = 5 # 튜플은 불변형이라 수정이나 추가가 불가능
+scores = [
+    {'name':'영수','score':70},
+    {'name':'영희','score':65},
+    {'name':'기찬','score':75},
+    {'name':'희수','score':23},
+    {'name':'서경','score':99},
+    {'name':'미주','score':100},
+    {'name':'병태','score':32}    
+]
 
-print(a, b)   
-
-# 집합
-
-student_a = ['물리2','국어','수학1','음악','화학1','화학2','체육']
-student_b = ['물리1','수학1','미술','화학2','체육']
-
-set_a = set(student_a) # 중복 제거
-set_b = set(student_b) 
-
-print(set_a & set_b) # 교집합
-print(set_a | set_b) # 합집합
-print(set_a - set_b) # 차집합
-print(set_a.difference(set_b)) # 차집합
+for s in scores:
+  name = s['name']
+  score = str(s['score']) # 숫자를 문자열로 변환
+  print(name + '의 점수는 ' + score + '점 입니다.') # f-string 없이 나타낼 때
+  print(f'{name}의 점수는 {score}점 입니다.') # f-string 적용시
+  
