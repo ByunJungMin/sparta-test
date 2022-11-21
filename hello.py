@@ -1,10 +1,19 @@
-# if elif else 문
+# 반복문
 
-money = 3000
+people = [
+    {'name': 'bob', 'age': 20},
+    {'name': 'carry', 'age': 38},
+    {'name': 'john', 'age': 7},
+    {'name': 'smith', 'age': 17},
+    {'name': 'ben', 'age': 27},
+    {'name': 'bobby', 'age': 57},
+    {'name': 'red', 'age': 32},
+    {'name': 'queen', 'age': 25}
+]
 
-if money > 3800:
-    print('택시를 타자!')
-elif money > 1200:
-    print('버스를 타자')
-else:
-    print('택시를 못타~')
+for i, person in enumerate(people):
+    name = person['name']
+    age = person['age']
+    print(i, name, age)
+    if i > 5:
+        break
