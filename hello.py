@@ -1,10 +1,10 @@
-# list 와 dictionary 사용
+# if elif else 문
 
-people = [
-    {'name': 'bob', 'age': 20, 'score':{'math':90,'science':70}},
-    {'name': 'carry', 'age': 38, 'score':{'math':40,'science':72}},
-    {'name': 'smith', 'age': 28, 'score':{'math':80,'science':90}},
-    {'name': 'john', 'age': 34, 'score':{'math':75,'science':100}}
-]
+money = 3000
 
-print(people[2]['score']['science'])
+if money > 3800:
+    print('택시를 타자!')
+elif money > 1200:
+    print('버스를 타자')
+else:
+    print('택시를 못타~')
