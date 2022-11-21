@@ -1,11 +1,15 @@
-# 최대값 구하기
+# 함수
 
-num_list = [1, 2, 3, 6, 3, 2, 4, 5, 6, 2, 4]
+def check_gender(pin):
+   num = pin.split('-')[1][:1]
+   num = int(num)
+   if num % 2 == 0:
+      print('여자입니다')
+   else:
+      print('남자입니다')
 
-max = 0
 
-for num in num_list:
-   if (max < num):
-      max = num
 
-print(max)
+check_gender('150101-1012345')
+check_gender('150101-2012345')
+check_gender('150101-4012345')
