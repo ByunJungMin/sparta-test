@@ -1,15 +1,10 @@
-#문자열 자르기
+# list 와 dictionary 사용
 
-text = 'abcdefg'
+people = [
+    {'name': 'bob', 'age': 20, 'score':{'math':90,'science':70}},
+    {'name': 'carry', 'age': 38, 'score':{'math':40,'science':72}},
+    {'name': 'smith', 'age': 28, 'score':{'math':80,'science':90}},
+    {'name': 'john', 'age': 34, 'score':{'math':75,'science':100}}
+]
 
-result = text[:3]
-
-print(result)
-
-################################
-
-phone = '02-123-1234'
-
-result = phone.split('-')[0]
-
-print(result)
+print(people[2]['score']['science'])
