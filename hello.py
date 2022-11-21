@@ -1,31 +1,19 @@
-# map, filter, lambda
+# 함수 인자 다루는 법
 
-people = [
-    {'name': 'bob', 'age': 20},
-    {'name': 'carry', 'age': 38},
-    {'name': 'john', 'age': 7},
-    {'name': 'smith', 'age': 17},
-    {'name': 'ben', 'age': 27},
-    {'name': 'bobby', 'age': 57},
-    {'name': 'red', 'age': 32},
-    {'name': 'queen', 'age': 25}
-]
+def cal(a,b):
+   return a + 2 * b
 
-def check_adult(person):                                                          # check_adult 함수
-   return ('성인' if person['age'] > 20 else '청소년')
+result = cal(a=1,b=2)   # a=1 b=2 처럼 값을 고정해서 넘겨줄 경우 순서에 상관이 없다.
+                        # ex) (b=2,a=1)  
+print(result)
 
+''''''''''''
 
-result = map(check_adult, people)                                                 # people 을 돌면서 check_adult에 넣어라
+def cal(a,b=2):         # 매개변수에 값을 정해준 경우 넘겨받는 값이 없으면 기존에 설정 되어 있는 값으로 진행한다.
+   return a + 2 * b
 
-print(list(result))
-
-''''''''''''''''''''''''''
-
-result = map(lambda person : ('성인' if person['age'] > 20 else '청소년'), people) # people를 돌면서 person에다 값을 넣을건데 : 을 기준으로 오른쪽에 있는 함수를 적용할거다
-                                                                                  # lambda 함수를 한줄로 줄여쓰기 위한 표현식
-print(list(result))
+result = cal(a=1)       
+                       
+print(result)
 
 
-result = filter(lambda person : person['age'] > 20, people)                       # filter 조건에 맞는것만 출력
-
-print(list(result))
